@@ -1,0 +1,67 @@
+Securing the Environment
+As this is a potentially compromised host, it is a good idea to ensure we are using known good binaries and libraries to conduct our information gathering and analysis.
+export PATH=/mnt/usb/bin:/mnt/usb/sbin
+export LD_LIBRARY_PATH=/mnt/usb/lib:/mnt/usb/lib64 
+
+Processes
+# ps 
+This is a command line utility in linux that reports a snapshot of active process on the system. by default it displays process with current  active processes
+ps command switches 
+  -u <user> to view  only processes associated with that user 
+  -e returns all processes
+  -F returns full formats
+  -H returns the hierachy of the process ie parent-child relationship
+
+
+
+#lsof
+
+This is used to veiw opened files and associated proceses running in the system 
+to view a file opened by a process you can supply switch -p with the process id 
+
+#pstree 
+this command shows a process visually as a tree with the parent-child relationship . to perform a deeper analysis you can provide switch -s for listing all parent processes with a corrensponding -p switch
+ie pstree -p -s <parent-process-id>
+ 
+#top command
+blah blah ... this lists active process running on the system 
+
+
+cronjobs
+cronjobs are scheduled tasks that runs automaticaly at prededined interval by the cron deamon. users have their crontab file either stored in the /var/spool/cron/crontab
+or /etc/crontab that governs the system-wide cronjobs
+ #cron execution logs
+  /var/log/syslog or /var/log/cron depends on the linux distro 
+
+pspy64 
+
+
+Services enumeration 
+using systemctl 
+ # systemctl list-units --all --type=service --state=running
+inspecting service configuration files 
+ #/etc/systemd/system 
+inspecting service logs 
+using journalctl command 
+ie journalctl -f -u <service name>
+Autostart scripts
+#system-wide autostart scripts
+found in directories like /etc/init.d /etc/rc.d or /etc/systemd/system/
+#user specific autostart scripts 
+~/.config/autostart/ ~/.config/
+# Identifying system autostart scripts 
+/etc/init.d/
+
+Application artefacts
+#dpkg 
+you can use dpkg to check for all packages installed in your system  . you can do this by using the command # dpkg -l to list all install packages 
+#vim
+you can also check the .viminfo for juicy info in the file 
+you can enumerate alll file for using the find command :find /home/ -type f -name ".viminfo" 2>/dev/null
+
+
+Browser Artefacts 
+web browser installed on the system can provide insights into user behaviour and activities these includes browser history ,download logs and stored cookies 
+
+you can use the find command to enumerate :find /home -type d \( -path "*/.mozilla/firefox" -o -path "*/.config/google-chrome" \) 2>/dev/null
+
