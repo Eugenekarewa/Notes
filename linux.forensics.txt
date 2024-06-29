@@ -65,3 +65,6 @@ web browser installed on the system can provide insights into user behaviour and
 
 you can use the find command to enumerate :find /home -type d \( -path "*/.mozilla/firefox" -o -path "*/.config/google-chrome" \) 2>/dev/null
 
+#checking for users with root level access you can do this by using the command 
+   cat /etc/passwd | cut -d: -f1,3 | grep ':0$'
+
