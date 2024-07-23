@@ -1,0 +1,32 @@
+xss attacks rely on injecting a malicious script in a benign website to run on a user browser.
+#types of xss 
+.stored-this attack relies on the user input stored on the website database
+.reflected - this attack relies on the user-controlled input reflected to the user 
+.dom based xss-this attack exploits vulnerabilities within a document object model(dom)to manipulate existing page elements without needing to be reflected or stored on the server.
+
+xss aims to bypass the same origin policy (SOP) which is a security mechanism implemented in modern web browsers to prevent malicious script one one webpage from obtaining access to sensitive data on another page.It defines origin based on the protocol, hostname and port.
+#javascript for xss
+.alert()
+.console.log()
+.btoa()
+.atob()
+.<script>alert(document.cookie)</script>
+#what makes xss possible 
+. Insufficient input validation and sanitization
+. Lack of output encoding
+. Improper use of security headers
+.Framework and language vulnerabilities
+.Third party libraries.
+
+
+# Implications of XSS
+.session hijacking
+.phishing and credential theft
+.social engineering
+.content manipulation and defacement
+.data exifltration
+.Malware installation
+
+#Vulnerable web application
+https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html
+
