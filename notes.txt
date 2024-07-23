@@ -1,0 +1,55 @@
+threat emulation methodologies 
+ mitre att&ck
+ this matrix usually visually represents attacker'stechniques to accomplish a specific objective.
+ #Atomic testing
+This is a library of emulation tests developed and curated by red canary that can be executed to test security defenses within an organisation. The framework provides a mechanism for learning what malicious activities looks like and provide telemetry from every tests to facilitate defence improvement
+the atomics are mapped into the MITRE ATT&CK framework , providing pivot between threat profiles and emulations.
+#TIBER-EU Framework 
+the threat inteligence-based ethical red teaming is the european framework developed to deliver controlled ,bespoke , intelligence-led emulation testing and organisation's critical live production systems.it  is meant to provide guidance for stakeholders to test and improve cyber resilience through controlled adversary actions .
+
+     #Preparation Phase
+     #Testing Phase
+     #Closure Phase
+
+#CTID adversary emulation library 
+The center for threat-informed defense is a non-profit research and development organisation operated by MITRE engenuity . its mission is to promote  the practice of threat-informed defence . the library provides users with two approaches 
+  #full emulation
+  #Micro emulation
+
+
+
+
+
+#THREAT EMULATION PROCESS
+ 1 Defining emulation Objectives 
+ 2.Research Adversary TTPs
+    2.1 Information Gathering
+    2.2 Select The Emulated Adversary
+        . Relevance- align the adversary with the objectives and company's goal
+        . Available CTI - ensure you have enough resources around the TTPs
+        . TTP Complexity-executing a fruitful emulation plan for complex adversaries  who uses sophisticated tools and proceedures may take a long time hence you need to ensure the existing tools can handle the emulation or whether custom ones are required.
+        . Available Resources-these are in-house resources that must be provisioned for a smooth operation.
+   2.3 Select The Emulated TTPs
+      this aims to accurately model the behaviour of the target adversary so that excercise can be conducted realisticaly and practically
+   2.4 Construct TTP Outline
+      This aims to construct a follow up threat emulation activities .
+
+
+
+
+#Planning the Threat Emulation Engagement
+Threat emulation plans
+    .engagement objectives
+    .scope
+    .schedule
+    .Rules of engagement
+    .permision to execute
+    .communication plan
+
+
+
+#Conducting the Emulation
+   . Planning the deployment
+   .Implementation of TTP 
+   .Detection & Mitigations
+
